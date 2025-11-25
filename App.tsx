@@ -28,8 +28,8 @@ const App: React.FC = () => {
             todo-purge
           </div>
           <div className="flex gap-6 text-sm font-medium text-gray-400">
-            <a href="https://github.com" target="_blank" rel="noreferrer" className="hover:text-white transition-colors">GitHub</a>
-            <a href="https://npmjs.com" target="_blank" rel="noreferrer" className="hover:text-white transition-colors">NPM</a>
+            <a href="https://github.com/shivanished/todo-purge" target="_blank" rel="noreferrer" className="hover:text-white transition-colors">GitHub</a>
+            <a href="https://www.npmjs.com/package/todo-purge" target="_blank" rel="noreferrer" className="hover:text-white transition-colors">NPM</a>
           </div>
         </div>
       </nav>
