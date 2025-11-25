@@ -46,7 +46,7 @@ const Hero: React.FC<HeroProps> = ({ onSeeAction }) => {
         <p className="text-xl text-gray-400 max-w-2xl mb-10 leading-relaxed">
           The CLI tool that scans your codebase and converts comments into tracked issues. 
           <span className="block mt-2 text-gray-500 text-lg">
-            Toggle on the <span className="text-gray-300 font-medium">optional AI mode</span> to have Gemini write the descriptions for you.
+            Toggle on the <span className="text-gray-300 font-medium">optional AI mode</span> to have GPT 5-Nano write the descriptions for you.
           </span>
         </p>
 
