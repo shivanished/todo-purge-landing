@@ -1,0 +1,5 @@
+{
+  "name": "Copy of todo-purge",
+  "description": "The CLI tool that turns codebase TODOs into Linear tickets instantly using AI. Stop tracking technical debt in comments.",
+  "requestFramePermissions": []
+}
