@@ -10,7 +10,7 @@ const features = [
   {
     icon: Brain,
     title: "Optional AI Smarts",
-    description: "Want better context? Enable the AI flag to have GPT 5-Nano analyze the code and write the ticket description for you.",
+    description: "Want better context? Share an API key to have gpt-5-nano analyze the code and write the ticket description for you.",
     badge: "New"
   },
   {

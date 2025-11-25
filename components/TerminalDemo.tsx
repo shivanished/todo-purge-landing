@@ -102,7 +102,7 @@ const TerminalDemo: React.FC = () => {
         const steps = [
           { msg: "Scanning codebase for TODOs and FIXMEs...", delay: 800 },
           { msg: "Found 1 issue in src/controllers/dispenser.ts:14", delay: 600 },
-          { msg: "Analyzing code context with GPT 5-Nano...", delay: 1200 },
+          { msg: "Analyzing code context with gpt-5-nano...", delay: 1200 },
           { msg: "✓ Generated ticket content", delay: 400 },
           { msg: "✓ Created Linear issue ENG-392", delay: 400 },
           { msg: "✓ Removed FIXME comment from source", delay: 800 },
