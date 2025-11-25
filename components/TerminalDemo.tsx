@@ -78,42 +78,54 @@ const TerminalDemo: React.FC = () => {
 
   // Auto-run terminal sequence
   useEffect(() => {
+    let isMounted = true;
+
     if (view === 'terminal') {
       const runSequence = async () => {
-        setLogs([]);
-        setTypedCommand('');
+        // Only reset logs if mounted
+        if (isMounted) {
+          setLogs([]);
+          setTypedCommand('');
+        }
         
         // Simulate typing
         const cmd = "todo-purge run";
         for (let i = 0; i <= cmd.length; i++) {
+          if (!isMounted) return;
           setTypedCommand(cmd.slice(0, i));
           await new Promise(r => setTimeout(r, 50 + Math.random() * 50));
         }
+        
+        if (!isMounted) return;
         await new Promise(r => setTimeout(r, 400));
         
-        // Logs
-        const addLog = (l: string) => setLogs(prev => [...prev, l]);
+        const steps = [
+          { msg: "Scanning codebase for TODOs and FIXMEs...", delay: 800 },
+          { msg: "Found 1 issue in src/controllers/dispenser.ts:14", delay: 600 },
+          { msg: "Analyzing code context with Gemini 2.5...", delay: 1200 },
+          { msg: "✓ Generated ticket content", delay: 400 },
+          { msg: "✓ Created Linear issue ENG-392", delay: 400 },
+          { msg: "✓ Removed FIXME comment from source", delay: 800 },
+          { msg: "Opening ticket...", delay: 1000 },
+        ];
+
+        for (const step of steps) {
+          if (!isMounted) return;
+          setLogs(prev => [...prev, step.msg]);
+          await new Promise(r => setTimeout(r, step.delay));
+        }
         
-        addLog("Scanning codebase for TODOs and FIXMEs...");
-        await new Promise(r => setTimeout(r, 800));
-        addLog("Found 1 issue in src/controllers/dispenser.ts:14");
-        await new Promise(r => setTimeout(r, 600));
-        addLog("Analyzing code context with Gemini 2.5...");
-        await new Promise(r => setTimeout(r, 1200));
-        addLog("✓ Generated ticket content");
-        await new Promise(r => setTimeout(r, 400));
-        addLog("✓ Created Linear issue ENG-392");
-        await new Promise(r => setTimeout(r, 400));
-        addLog("✓ Removed FIXME comment from source");
-        await new Promise(r => setTimeout(r, 800));
-        addLog("Opening ticket...");
-        await new Promise(r => setTimeout(r, 1000));
-        
-        setView('linear');
+        if (isMounted) {
+          setView('linear');
+        }
       };
 
       runSequence();
     }
+
+    return () => {
+      isMounted = false;
+    };
   }, [view]);
 
   // Scroll terminal to bottom
