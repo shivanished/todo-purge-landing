@@ -65,8 +65,14 @@ const Hero: React.FC<HeroProps> = ({ onSeeAction }) => {
               {copied ? <Check className="w-4 h-4 text-green-500" /> : <Copy className="w-4 h-4" />}
             </button>
           </div>
-          <Button size="lg" className="w-full sm:w-auto min-w-[160px]" onClick={handleActionClick}>
-            See it in Action <ChevronRight className="w-4 h-4 ml-1" />
+          <Button
+            size="lg"
+            className="w-full sm:w-auto min-w-[180px] whitespace-nowrap flex items-center justify-center"
+            onClick={handleActionClick}
+          >
+            <span className="whitespace-nowrap flex items-center">
+              See it in Action <ChevronRight className="w-4 h-4 ml-1" />
+            </span>
           </Button>
         </div>
 
