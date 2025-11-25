@@ -274,13 +274,13 @@ const TerminalDemo: React.FC = () => {
                             <span className="text-xs text-gray-500">Subscribe</span>
                           </div>
                           
-                          <div className="flex gap-4 items-center">
-                             <div className="w-6 h-6 rounded-full bg-brand-600 flex items-center justify-center text-[10px] text-white font-bold shrink-0">
-                               TP
+                          <div className="flex gap-4">
+                             <div className="w-6 h-6 rounded-full bg-brand-600 flex items-center justify-center text-[10px] text-white font-bold shrink-0 mt-1">
+                               AI
                              </div>
                              <div>
-                                <div className="text-sm text-gray-300 flex items-center">
-                                   <span className="font-medium text-white">todo-purge</span>&nbsp;created the issue
+                                <div className="text-sm text-gray-300">
+                                   <span className="font-medium text-white">todo-purge</span> created the issue via CLI
                                    <span className="text-gray-500 text-xs ml-2">just now</span>
                                 </div>
                              </div>

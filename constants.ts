@@ -1,6 +1,7 @@
 import { CodeFile, LinearTicket } from './types';
 
 export const CLI_INSTALL_CMD = 'npm i -g todo-purge';
+export const GEMINI_MODEL = 'gemini-2.5-flash';
 
 export const DEMO_CODE_FILE: CodeFile = {
   name: 'src/controllers/dispenser.ts',
