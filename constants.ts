@@ -16,7 +16,7 @@ export async function dispenseCoffee(userId: string, selection: CoffeeType) {
     throw new Error("Insufficient credits");
   }
 
-  // FIXME: Fix race condition here.
+
   // If the user mashes the button, we might deduct credits once
   // but dispense multiple drinks because the hardware await
   // doesn't block the second request fast enough.
@@ -46,7 +46,7 @@ export const INITIAL_TICKET: LinearTicket = {
   codeContext: {
     file: 'src/controllers/dispenser.ts',
     line: 14,
-    snippet: `  // FIXME: Fix race condition here.
+    snippet: `
   // If the user mashes the button, we might deduct credits once
   // but dispense multiple drinks because the hardware await
   // doesn't block the second request fast enough.
