@@ -45,11 +45,22 @@ export const INITIAL_TICKET: LinearTicket = {
   project: 'Q2 Stability',
   codeContext: {
     file: 'src/controllers/dispenser.ts',
-    line: 14,
-    snippet: `
-  // If the user mashes the button, we might deduct credits once
-  // but dispense multiple drinks because the hardware await
-  // doesn't block the second request fast enough.
-  // Need to implement a distributed lock or optimistic concurrency control.`
+    line: 15,
+    snippet: `export async function dispenseCoffee(userId: string, selection: CoffeeType) {
+  const user = await db.users.get(userId);
+  
+  if (user.credits < selection.price) {
+    throw new Error("Insufficient credits");
+  }
+
+  await user.deductCredits(selection.price);
+  await hardware.dispense(selection);
+  
+  await db.analytics.logDispense({
+    userId,
+    sku: selection.sku,
+    timestamp: Date.now()
+  });
+}`
   }
 };
