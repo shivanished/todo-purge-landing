@@ -346,12 +346,12 @@ const TerminalDemo: React.FC = () => {
                         <span className="text-xs text-gray-500">Subscribe</span>
                       </div>
 
-                      <div className="flex gap-4">
-                        <div className="w-6 h-6 rounded-full bg-brand-600 flex items-center justify-center text-[10px] text-white font-bold shrink-0 mt-1">
+                      <div className="flex gap-4 items-start">
+                        <div className="w-6 h-6 rounded-full bg-brand-600 flex items-center justify-center text-[10px] text-white font-bold shrink-0">
                           AI
                         </div>
-                        <div>
-                          <div className="text-sm text-gray-300">
+                        <div className="flex-1">
+                          <div className="text-sm text-gray-300 leading-6">
                             <span className="font-medium text-white">
                               todo-purge
                             </span>{" "}
