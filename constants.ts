@@ -34,13 +34,13 @@ export async function dispenseCoffee(userId: string, selection: CoffeeType) {
 };
 
 export const INITIAL_TICKET: LinearTicket = {
-  id: 'ENG-392',
+  id: 'REA-392',
   title: 'Fix race condition in coffee dispensing logic',
   description: 'The current implementation of `dispenseCoffee` contains a race condition where a user can trigger multiple dispense operations for a single credit deduction by sending concurrent requests (e.g., button mashing). \n\nThe hardware dispense operation is awaited after credit deduction, but there is no locking mechanism preventing a second request from passing the credit check before the first deduction completes.\n\n**Suggested Fix**\nImplement a Redis-based mutex lock on the `userId` key during the transaction, or switch to an atomic `decrement` operation in the database that returns the new balance.',
   status: 'Todo',
   priority: 'High',
   assignee: 'You',
-  team: 'Engineering',
+  team: 'Really Good Coffee',
   labels: ['Bug', 'Security', 'Hardware'],
   project: 'Q2 Stability',
   codeContext: {

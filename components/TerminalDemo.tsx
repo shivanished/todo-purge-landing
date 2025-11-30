@@ -140,7 +140,7 @@ const TerminalDemo: React.FC = () => {
           },
           { msg: "Analyzing code context with gpt-5-nano...", delay: 1200 },
           { msg: "✓ Generated ticket content", delay: 400 },
-          { msg: "✓ Created Linear issue ENG-392", delay: 400 },
+          { msg: "✓ Created Linear issue REA-392", delay: 400 },
           { msg: "✓ Removed FIXME comment from source", delay: 800 },
           { msg: "Opening ticket...", delay: 1000 },
         ];
@@ -230,9 +230,9 @@ const TerminalDemo: React.FC = () => {
             <div className="w-[240px] bg-[#191a23] border-r border-[#22232e] flex flex-col py-4 px-3 gap-6 shrink-0 hidden md:flex">
               <div className="flex items-center gap-2 px-2 text-[#e5e5e5] font-semibold text-sm">
                 <div className="w-5 h-5 bg-indigo-500 rounded flex items-center justify-center text-[10px] text-white">
-                  E
+                  R
                 </div>
-                Engineering
+                Really Good Coffee
                 <ChevronDown className="w-3 h-3 text-gray-500 ml-auto" />
               </div>
 
