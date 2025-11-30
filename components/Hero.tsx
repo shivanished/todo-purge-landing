@@ -44,7 +44,7 @@ const Hero: React.FC<HeroProps> = ({ onSeeAction }) => {
         </h1>
 
         <p className="text-xl text-gray-400 max-w-2xl mb-10 leading-relaxed">
-          The CLI tool that scans your codebase and converts comments into tracked issues. 
+          The CLI tool that scans your codebase and converts TODO/FIXME comments into tracked issues. 
         </p>
 
         <div className="flex flex-col sm:flex-row items-center gap-4 w-full max-w-md mx-auto mb-16">
