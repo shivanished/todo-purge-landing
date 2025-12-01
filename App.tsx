@@ -40,7 +40,7 @@ const App: React.FC = () => {
         <div id="demo" className="scroll-mt-24">
           <div className="text-center mb-8">
             <h2 className="text-2xl font-bold text-white mb-2">Interactive Demo</h2>
-            <p className="text-gray-500">Experience the power of Smart Purge directly in your browser.</p>
+            <p className="text-gray-500">Experience the power of todo-purge directly in your browser.</p>
           </div>
           <TerminalDemo key={demoKey} />
         </div>
